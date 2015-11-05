@@ -1,0 +1,15 @@
+{
+  "name": "map-json-webpack-plugin",
+  "version": "1.0.0",
+  "author": "yiminghe@gmail.com",
+  "files": [
+    "index.js"
+  ],
+  "homepage": "https://github.com/yiminghe/map-json-webpack-plugin",
+  "scripts": {
+    "publish": "git push origin"
+  },
+  "dependencies": {
+    "fs-extra": "~0.26.2"
+  }
+}
