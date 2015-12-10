@@ -1,10 +1,22 @@
 {
   "name": "map-json-webpack-plugin",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "yiminghe@gmail.com",
+  "keywords": [
+    "webpack",
+    "hash-map"
+  ],
   "files": [
     "index.js"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:yiminghe/map-json-webpack-plugin.git"
+  },
+  "bugs": {
+    "url": "http://github.com/yiminghe/map-json-webpack-plugin/issues"
+  },
+  "licenses": "MIT",
   "homepage": "https://github.com/yiminghe/map-json-webpack-plugin",
   "scripts": {
     "publish": "git push origin"
