@@ -32,3 +32,10 @@ plugins: [
   })
 ]
 ```
+
+## history
+
+### 1.1.0
+
+- [1](https://github.com/yiminghe/map-json-webpack-plugin/pull/1). Default `output` using webpack `output.path`
+
