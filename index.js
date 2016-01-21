@@ -6,7 +6,7 @@ module.exports = function (config) {
   config = config || {};
   var appName = config.appName || '';
   var assetsPath = config.assetsPath || '';
-  var output = config.output || 'config/map.json';
+  var output = config.output;
   return function () {
     this.plugin('done', function (stats) {
       var json = stats.toJson();
@@ -32,7 +32,8 @@ module.exports = function (config) {
 
       assets.forEach(processFile);
 
-      var outputFile = path.resolve(cwd, output);
+      var webpackOutputFile = path.join(this.outputPath, 'map.json');
+      var outputFile = output ? path.resolve(cwd, output) : webpackOutputFile;
       var outputDir = path.dirname(outputFile);
       fs.mkdirsSync(outputDir);
       fs.writeFileSync(outputFile, JSON.stringify(map, null, 2));
