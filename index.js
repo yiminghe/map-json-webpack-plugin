@@ -11,6 +11,7 @@ module.exports = function (config) {
     this.plugin('done', function (stats) {
       var json = stats.toJson();
       var assets = json.assets;
+      var cache = config.cache = config.cache || {};
       var map = {};
 
       function processFile(a) {
@@ -36,7 +37,8 @@ module.exports = function (config) {
       var outputFile = output ? path.resolve(cwd, output) : webpackOutputFile;
       var outputDir = path.dirname(outputFile);
       fs.mkdirsSync(outputDir);
-      fs.writeFileSync(outputFile, JSON.stringify(map, null, 2));
+      Object.assign(cache, map);
+      fs.writeFileSync(outputFile, JSON.stringify(cache, null, 2));
     });
   }
 };
