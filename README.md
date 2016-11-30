@@ -35,7 +35,11 @@ plugins: [
 
 ## history
 
+### 1.2.0
+
+- https://github.com/yiminghe/map-json-webpack-plugin/pull/2. support cache, across multiple build
+
 ### 1.1.0
 
-- [1](https://github.com/yiminghe/map-json-webpack-plugin/pull/1). Default `output` using webpack `output.path`
+- https://github.com/yiminghe/map-json-webpack-plugin/pull/1. Default `output` using webpack `output.path`
 

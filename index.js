@@ -11,7 +11,7 @@ module.exports = function (config) {
     this.plugin('done', function (stats) {
       var json = stats.toJson();
       var assets = json.assets;
-      var cache = config.cache = config.cache || {};
+      var cache = config.cache || {};
       var map = {};
 
       function processFile(a) {
